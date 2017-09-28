@@ -1,0 +1,8 @@
+<resources>
+    <string name="hello_world">Welcome to PhoneSweeper Sign Up / Sign In to begin</string>
+    <string name="app_name">PhoneSweeper</string>
+    <string name="tapme">Tap me!</string>
+    <string name="Log_In">Log in</string>
+    <string name="Sign_Up">Sign up</string>
+    <string name="information">Information!</string>
+</resources>
