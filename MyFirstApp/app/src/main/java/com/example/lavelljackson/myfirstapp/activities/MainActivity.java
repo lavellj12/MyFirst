@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         myDb = new Databasehelper(this);
         Log.d(TAG, "onCreate: Starting.");
 
-        //Logging In button
+        //"Button" is creating button5 and attaching it to the id Button5
         Button button5 = (Button) findViewById(id.button5);
 
         //Click the button to go to the login page
@@ -44,28 +44,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d(TAG, "onClick: Clicked button5.");
 
-                EditText a = (EditText)findViewById(R.id.ediUser);
-                String str = a.getText().toString();
-                EditText b = (EditText)findViewById(R.id.ediPass);
-                String pass = b.getText().toString();
 
-                String password = helper.searchPass(str);
-                if(pass.equals(password))
-                {
                     Intent i = new Intent(MainActivity.this, login.class);
-                    i.putExtra("Username",str);
                     startActivity(i);
                 }
-                else
-                {
-                    Toast temp = Toast.makeText(MainActivity.this , "Passwords do not match!!" , Toast.LENGTH_SHORT);
-                    temp.show();
-                }
-
-
-
-
-            }
         });
 
         Button button6 = (Button) findViewById(id.button6);

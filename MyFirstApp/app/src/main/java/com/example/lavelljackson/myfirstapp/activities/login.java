@@ -1,5 +1,8 @@
 /** Clement Lavell Jackson III
  * 8/27/17 1:49am
+ * I been working on this I promise.
+ * I need the app to move away from Admin and 1234
+ * and start pulling accounts from the "Databasehelper"
  */
 
 
@@ -54,14 +57,20 @@ public class login extends AppCompatActivity {
     }
 
     private void validate(String userName, String userPassword){
+
         //Creating Username: Admin And Password: 1234
         if((Objects.equals(userName, "Admin")) && (Objects.equals(userPassword, "1234"))) {
+
             //If successful it will proceed to the next page
             Intent intent = new Intent(login.this, Successpage.class);
             startActivity(intent);
+
         }else{
+
+            //THe counter to change
             counter--;
 
+            //If you enter the password wrong the number of attepts changers
             Info.setText("Number of attempts: " + String.valueOf(counter));
 
             if(counter == 0){
